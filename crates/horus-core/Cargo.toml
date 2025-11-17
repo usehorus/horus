@@ -1,0 +1,13 @@
+[package]
+name = "horus-core"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Shared types for the HORUS protocol (pubkeys, scopes, errors)."
+
+[dependencies]
+thiserror.workspace = true
+serde.workspace = true
+hex.workspace = true
