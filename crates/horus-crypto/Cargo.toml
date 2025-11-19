@@ -1,0 +1,15 @@
+[package]
+name = "horus-crypto"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Hashing, commitments, and signature verification for HORUS."
+
+[dependencies]
+horus-core = { path = "../horus-core" }
+blake3.workspace = true
+ed25519-dalek.workspace = true
+serde.workspace = true
+hex.workspace = true
