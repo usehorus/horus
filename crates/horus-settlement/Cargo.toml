@@ -1,0 +1,13 @@
+[package]
+name = "horus-settlement"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Escrow and per-query settlement (RFC-0007)."
+
+[dependencies]
+horus-core = { path = "../horus-core" }
+serde.workspace = true
+thiserror.workspace = true
