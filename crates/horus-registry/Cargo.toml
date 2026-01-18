@@ -1,0 +1,14 @@
+[package]
+name = "horus-registry"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Dataset registry and predicate-commitment listings (RFC-0009)."
+
+[dependencies]
+horus-core = { path = "../horus-core" }
+horus-crypto = { path = "../horus-crypto" }
+serde.workspace = true
+thiserror.workspace = true
