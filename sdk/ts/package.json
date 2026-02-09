@@ -1,0 +1,29 @@
+{
+  "name": "@usehorus/sdk",
+  "version": "0.4.0-beta.1",
+  "description": "TypeScript client for the HORUS data-access protocol (beta).",
+  "license": "Apache-2.0 OR MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/usehorus/horus.git",
+    "directory": "sdk/ts"
+  },
+  "homepage": "https://usehorus.xyz",
+  "type": "module",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": ["dist", "src"],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test",
+    "lint": "tsc --noEmit"
+  },
+  "engines": { "node": ">=18" },
+  "dependencies": {
+    "@solana/web3.js": "^1.91.0",
+    "@noble/hashes": "^1.4.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0"
+  }
+}
