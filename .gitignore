@@ -1,0 +1,17 @@
+/target
+**/*.rs.bk
+Cargo.lock
+.DS_Store
+*.swp
+*.swo
+/node_modules
+/sdk/ts/dist
+/sdk/ts/node_modules
+__pycache__/
+*.pyc
+.venv/
+/.idea
+/.vscode
+*.log
+/proving_keys
+*.zkey
