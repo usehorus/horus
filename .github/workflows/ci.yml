@@ -1,0 +1,45 @@
+name: ci
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+env:
+  CARGO_TERM_COLOR: always
+  RUST_BACKTRACE: 1
+
+jobs:
+  test:
+    name: build + test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.78
+        with:
+          components: rustfmt, clippy
+      - uses: Swatinem/rust-cache@v2
+      - name: fmt
+        run: cargo fmt --all -- --check
+        continue-on-error: true
+      - name: clippy
+        run: cargo clippy --workspace --all-targets
+        continue-on-error: true
+      - name: build
+        run: cargo build --workspace
+      - name: test
+        run: cargo test --workspace
+
+  zk-experimental:
+    name: zk (experimental, non-blocking)
+    runs-on: ubuntu-latest
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@1.78
+      - uses: Swatinem/rust-cache@v2
+      - name: build with zk-experimental
+        run: cargo build -p horus-zk --features zk-experimental
+      - name: test zk circuits
+        run: cargo test -p horus-zk --features zk-experimental
