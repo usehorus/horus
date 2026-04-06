@@ -242,3 +242,5 @@ mod tests {
         );
     }
 }
+
+//! gateway: document usage-accrual invariant
