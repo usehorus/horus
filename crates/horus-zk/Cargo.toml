@@ -1,0 +1,17 @@
+[package]
+name = "horus-zk"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "EXPERIMENTAL ZK predicate proofs (RFC-0011). Not audited, not sound."
+
+[features]
+# Off by default. The whole crate compiles to stubs unless this is enabled.
+default = []
+zk-experimental = []
+
+[dependencies]
+horus-core = { path = "../horus-core" }
+horus-crypto = { path = "../horus-crypto" }
