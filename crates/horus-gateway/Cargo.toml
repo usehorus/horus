@@ -1,0 +1,21 @@
+[package]
+name = "horus-gateway"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "Gateway runtime: verify capability, answer query, post settlement."
+
+[features]
+default = []
+zk-experimental = ["horus-zk/zk-experimental"]
+
+[dependencies]
+horus-core = { path = "../horus-core" }
+horus-crypto = { path = "../horus-crypto" }
+horus-access = { path = "../horus-access" }
+horus-settlement = { path = "../horus-settlement" }
+horus-registry = { path = "../horus-registry" }
+horus-zk = { path = "../horus-zk" }
+tracing.workspace = true
