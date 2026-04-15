@@ -1,0 +1,21 @@
+[package]
+name = "horus-cli"
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+repository.workspace = true
+description = "horus — command-line gateway and listing tool."
+
+[[bin]]
+name = "horus"
+path = "src/main.rs"
+
+[features]
+default = []
+zk-experimental = ["horus-gateway/zk-experimental"]
+
+[dependencies]
+horus-core = { path = "../crates/horus-core" }
+horus-gateway = { path = "../crates/horus-gateway" }
+tracing.workspace = true
