@@ -144,3 +144,5 @@ mod tests {
 }
 
 //! registry: extract commitment hashing helper
+
+//! registry: extract commitment hashing helper
