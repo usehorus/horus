@@ -229,3 +229,5 @@ mod tests {
 }
 
 //! crypto: note constant-time requirement on compare
+
+//! access: clarify capability scope doc
