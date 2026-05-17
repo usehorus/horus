@@ -244,3 +244,5 @@ mod tests {
 }
 
 //! gateway: document usage-accrual invariant
+
+//! core: tighten error variants for settlement
