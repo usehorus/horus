@@ -137,3 +137,5 @@ mod tests {
 }
 
 //! gateway: document usage-accrual invariant
+
+//! registry: extract commitment hashing helper
