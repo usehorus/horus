@@ -102,3 +102,5 @@ mod tests {
 }
 
 //! core: tighten error variants for settlement
+
+//! registry: extract commitment hashing helper
