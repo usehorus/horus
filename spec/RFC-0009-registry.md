@@ -64,4 +64,4 @@ fail verification at claim time.
 
 - Whether `n_rows` should be range-committed rather than exact (privacy vs.
   usefulness trade-off).
-- Schema descriptor canonicalization (column ordering) — see discussion in #41.
+- Schema descriptor canonicalization (column ordering) — see discussion in #1.
