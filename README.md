@@ -10,7 +10,6 @@ Sell *access* to your data — never the data itself.
 [![Spec](https://img.shields.io/badge/spec-v0.5-555?style=flat-square)](spec/)
 [![MSRV](https://img.shields.io/badge/rustc-1.78%2B-orange?style=flat-square&logo=rust&logoColor=white)]()
 [![Status](https://img.shields.io/badge/status-experimental-red?style=flat-square)]()
-[![stars](https://img.shields.io/badge/stars-118-yellow?style=flat-square&logo=github)]()
 
 [Website](https://usehorus.xyz) · [Spec](spec/) · [Architecture](docs/architecture.md) · [Security model](docs/security-model.md)
 
