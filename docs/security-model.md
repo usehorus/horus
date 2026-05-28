@@ -43,3 +43,19 @@ The gateway holds the dataset decryption key in process memory. Key custody,
 rotation, and HSM integration are operator concerns and out of scope for this
 repo. Capabilities and claims are signed with Ed25519; `horus-crypto::verify_sig`
 is the single verification entry point.
+
+## Residual risks (accepted for v0)
+
+These are known and intentionally unaddressed at this stage. They are listed so
+they are not mistaken for oversights.
+
+- **Query privacy.** A gateway sees every query in plaintext. Private
+  information retrieval is out of scope for v0 (RFC-0001 non-goals).
+- **Gateway availability.** A capability grants the *right* to query, not a
+  liveness guarantee. A gateway that goes dark strands paid-for queries; the
+  buyer's recourse is the post-`not_after` refund path, not forced answering.
+- **Metadata leakage.** Listing size, update cadence, and claim volume are
+  on-chain and public. Traffic analysis is possible even though dataset
+  contents are not revealed.
+- **Side channels.** `digest_eq` is constant-time, but the broader gateway
+  answer path is not audited for timing leaks against the decrypted dataset.
