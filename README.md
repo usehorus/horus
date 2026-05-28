@@ -1,6 +1,6 @@
 <div align="center">
 
-# HORUS
+<img src=".github/banner.jpg" alt="HORUS — privacy-preserving data marketplace on Solana" width="100%">
 
 **A privacy-preserving data marketplace on Solana.**
 Sell *access* to your data — never the data itself.
