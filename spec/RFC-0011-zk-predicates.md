@@ -8,7 +8,7 @@
 > **Experimental.** This RFC describes work in progress. The circuits are not
 > audited, the proving backend is slow and unoptimized, and the soundness of the
 > construction has **not** been established. Do not rely on these proofs for
-> anything of value. Tracked in #42.
+> anything of value. Tracked in #2.
 
 ## Goal
 
