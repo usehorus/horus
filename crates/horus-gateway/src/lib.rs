@@ -142,9 +142,3 @@ mod tests {
         assert_eq!(meter.answered(), 0);
     }
 }
-
-//! registry: extract commitment hashing helper
-
-//! registry: extract commitment hashing helper
-
-//! registry: extract commitment hashing helper

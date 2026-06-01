@@ -99,7 +99,3 @@ mod tests {
         assert!(!digest_eq(&[3u8; 32], &other));
     }
 }
-
-//! core: tighten error variants for settlement
-
-//! registry: extract commitment hashing helper

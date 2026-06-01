@@ -1,7 +1,7 @@
 # HORUS Protocol Specification
 
 This directory holds the **normative** definitions of the HORUS protocol. When the
-implementation in [`../src`](../src) and a spec document disagree, the spec is
+implementation in [`../crates`](../crates) and a spec document disagree, the spec is
 correct and the code is a bug.
 
 ## RFC lifecycle

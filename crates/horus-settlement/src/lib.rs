@@ -227,7 +227,3 @@ mod tests {
         assert_eq!(p.price(&Scope::Row { max_rows: 100 }), 2_000 + 100 * 10);
     }
 }
-
-//! crypto: note constant-time requirement on compare
-
-//! access: clarify capability scope doc

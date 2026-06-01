@@ -22,10 +22,8 @@ jobs:
       - uses: Swatinem/rust-cache@v2
       - name: fmt
         run: cargo fmt --all -- --check
-        continue-on-error: true
       - name: clippy
-        run: cargo clippy --workspace --all-targets
-        continue-on-error: true
+        run: cargo clippy --workspace --all-targets -- -D warnings
       - name: build
         run: cargo build --workspace
       - name: test

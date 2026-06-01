@@ -3,8 +3,8 @@
 ## Status
 
 HORUS is **pre-audit, experimental software**. The on-chain programs have not
-been audited and the ZK circuits (`crates/horus-zk`, behind
-`ENABLE_ZK_EXPERIMENTAL`) carry no soundness guarantees. Do not use HORUS to
+been audited and the ZK circuits (`crates/horus-zk`, behind the
+`zk-experimental` Cargo feature) carry no soundness guarantees. Do not use HORUS to
 custody funds or data of value.
 
 ## Supported versions

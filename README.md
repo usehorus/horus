@@ -5,9 +5,9 @@
 **A privacy-preserving data marketplace on Solana.**
 Sell *access* to your data — never the data itself.
 
-[![CI](https://img.shields.io/badge/CI-passing-brightgreen?style=flat-square&logo=githubactions&logoColor=white)](https://github.com/usehorus/horus/actions)
+[![CI](https://github.com/usehorus/horus/actions/workflows/ci.yml/badge.svg)](https://github.com/usehorus/horus/actions/workflows/ci.yml)
 [![License](https://img.shields.io/badge/license-Apache--2.0%20OR%20MIT-blue?style=flat-square)](#license)
-[![Spec](https://img.shields.io/badge/spec-v0.5-555?style=flat-square)](spec/)
+[![Spec](https://img.shields.io/badge/spec-RFC--first-555?style=flat-square)](spec/)
 [![MSRV](https://img.shields.io/badge/rustc-1.78%2B-orange?style=flat-square&logo=rust&logoColor=white)]()
 [![Status](https://img.shields.io/badge/status-experimental-red?style=flat-square)]()
 
@@ -113,13 +113,18 @@ horus gateway \
 
 | SDK | Package | Status | Notes |
 |-----|---------|--------|-------|
-| Rust | `horus-sdk` (`sdk/rust`) | 🟢 primary | Source of truth; other SDKs mirror it. |
-| TypeScript | `@usehorus/sdk` (`sdk/ts`) | 🟡 beta | Browser + node; codegen'd types from Rust. |
-| Python | `horus-sdk` (`sdk/py`) | 🟡 beta | Async client, pluggable signer. |
+| Rust | `horus-sdk` (`sdk/rust`) | 🟢 codec + types | Source of truth; commitment construction is implemented. On-chain client is WIP. |
+| TypeScript | `@usehorus/sdk` (`sdk/ts`) | 🟡 codec only | Commitment codec matches Rust byte-for-byte; client RPC stubbed until programs deploy. |
+| Python | `horus-sdk` (`sdk/py`) | 🟡 codec only | Same scope as TS. |
+
+The client surface below is the **target API**. What ships today is the verified
+commitment codec (`commit`, `estimateBudget`); `connect` / `buyAccess` / `query`
+throw until the Solana programs are deployed (RFC-0001 §End-to-end flow).
 
 ```ts
 import { Horus } from "@usehorus/sdk";
 
+// Target API (on-chain calls land with the settlement programs):
 const horus = await Horus.connect({ cluster: "devnet" });
 const cap = await horus.buyAccess(listingId, { queries: 100, ttlSecs: 3600 });
 const { rows, proof } = await horus.query(cap, "SELECT count(*) WHERE region = 'EU'");

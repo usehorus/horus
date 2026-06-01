@@ -1,0 +1,10 @@
+# Default owner for everything
+* @usehorus
+
+# Spec changes require explicit review
+/spec/ @usehorus
+
+# Security-sensitive crates
+/crates/horus-settlement/ @usehorus
+/crates/horus-zk/ @usehorus
+/crates/horus-crypto/ @usehorus

@@ -100,7 +100,3 @@ mod tests {
         assert_eq!(format!("{k:?}"), "Pubkey(abababab…)");
     }
 }
-
-//! core: tighten error variants for settlement
-
-//! registry: extract commitment hashing helper

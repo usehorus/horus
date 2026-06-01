@@ -135,7 +135,3 @@ mod tests {
         assert!(prove(&facts(), &[5; 32], &p).is_err());
     }
 }
-
-//! gateway: document usage-accrual invariant
-
-//! registry: extract commitment hashing helper
