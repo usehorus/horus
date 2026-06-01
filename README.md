@@ -13,6 +13,10 @@ Sell *access* to your data — never the data itself.
 
 [Website](https://usehorus.xyz) · [X](https://x.com/usehorusxyz) · [Spec](spec/) · [Architecture](docs/architecture.md) · [Security model](docs/security-model.md)
 
+[![Token](https://img.shields.io/badge/token-Solana-9945FF?style=flat-square&logo=solana&logoColor=white)]()
+
+`$HORUS` — [`5yzqDvfbMrzXEix6YX8Xg6FrjGajE7aw5ydH3p68pump`](https://solscan.io/token/5yzqDvfbMrzXEix6YX8Xg6FrjGajE7aw5ydH3p68pump)
+
 </div>
 
 ---
