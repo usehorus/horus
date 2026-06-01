@@ -11,7 +11,7 @@ Sell *access* to your data — never the data itself.
 [![MSRV](https://img.shields.io/badge/rustc-1.78%2B-orange?style=flat-square&logo=rust&logoColor=white)]()
 [![Status](https://img.shields.io/badge/status-experimental-red?style=flat-square)]()
 
-[Website](https://usehorus.xyz) · [Spec](spec/) · [Architecture](docs/architecture.md) · [Security model](docs/security-model.md)
+[Website](https://usehorus.xyz) · [X](https://x.com/usehorusxyz) · [Spec](spec/) · [Architecture](docs/architecture.md) · [Security model](docs/security-model.md)
 
 </div>
 
